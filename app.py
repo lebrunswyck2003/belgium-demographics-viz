@@ -42,7 +42,7 @@ MERGER_MAP = {
 def load_data():
     muni = pd.read_parquet("muni_choropleth.parquet")
     region = pd.read_parquet("region_data.parquet")
-    with open("belgium_municipalities_extended.geojson") as f:
+    with open("belgium_municipalities.geojson") as f:
         geo = json.load(f)
     return muni, region, geo
 
