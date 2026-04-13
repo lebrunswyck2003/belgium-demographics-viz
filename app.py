@@ -38,7 +38,7 @@ MERGER_MAP = {
     "82039": ["82003","82005"],
 }
 
-@st.cache_data
+@st.cache_data(ttl=0)  # disable cache
 def load_data():
     muni = pd.read_parquet("muni_choropleth.parquet")
     region = pd.read_parquet("region_data.parquet")
